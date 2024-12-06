@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  Pixel\TownHallJobOfferBundle\Service\JobOfferService:
+    autowire: true
+    public: true
+
+  Pixel\TownHallJobOfferBundle\Twig\JobOfferExtension:
+    public: true
+    autowire: true
+    tags:
+      - { name: twig.extension }
