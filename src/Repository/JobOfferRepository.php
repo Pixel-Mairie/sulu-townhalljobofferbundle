@@ -28,6 +28,11 @@ class JobOfferRepository extends EntityRepository implements DataProviderReposit
         return $jobOffer;
     }
 
+    /**
+     * @param array<mixed> $filters
+     * @param array<mixed> $options
+     * @return array<mixed>|object[]
+     */
     public function findByFilters($filters, $page, $pageSize, $limit, $locale, $options = []): array
     {
         $pageCurrent = (key_exists("page", $options)) ? (int) $options['page'] : 0;
