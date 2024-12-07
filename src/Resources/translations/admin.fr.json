@@ -1,0 +1,8 @@
+{
+  "townhall.job_offers": "Offres d'emploi",
+  "sulu_activity.resource.jobs_offers": "Offer d'emploi",
+  "sulu_activity.description.jobs_offers.created": "{userFullName} a créé l'offre d'emploi \"{resourceTitle}\"",
+  "sulu_activity.description.jobs_offers.modified": "{userFullName} a modifié l'offre d'emploi \"{resourceTitle}\"",
+  "sulu_activity.description.jobs_offers.removed": "{userFullName} a supprimé l'offre d'emploi \"{resourceTitle}\"",
+  "sulu_activity.description.jobs_offers.restored": "{userFullName} a restauré l'offre d'emploi \"{resourceTitle}\""
+}
