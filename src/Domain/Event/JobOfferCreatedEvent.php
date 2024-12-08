@@ -9,6 +9,8 @@ use Sulu\Bundle\ActivityBundle\Domain\Event\DomainEvent;
 
 class JobOfferCreatedEvent extends DomainEvent
 {
+    use JobOfferEventTrait;
+
     private JobOffer $jobOffer;
 
     /**
@@ -26,38 +28,13 @@ class JobOfferCreatedEvent extends DomainEvent
         $this->payload = $payload;
     }
 
-    public function getJobOffer(): JobOffer
-    {
-        return $this->jobOffer;
-    }
-
-    public function getEventPayload(): ?array
-    {
-        return $this->payload;
-    }
-
     public function getEventType(): string
     {
         return 'created';
     }
 
-    public function getResourceKey(): string
+    public function getEventPayload(): ?array
     {
-        return JobOffer::RESOURCE_KEY;
-    }
-
-    public function getResourceId(): string
-    {
-        return (string) $this->jobOffer->getId();
-    }
-
-    public function getResourceTitle(): ?string
-    {
-        return $this->jobOffer->getName();
-    }
-
-    public function getResourceSecurityContext(): ?string
-    {
-        return JobOffer::SECURITY_CONTEXT;
+        return $this->payload;
     }
 }
